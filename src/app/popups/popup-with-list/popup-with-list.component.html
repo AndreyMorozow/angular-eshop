@@ -1,0 +1,13 @@
+<div class="popup" mat-dialog-content>
+  <div *ngIf="data.popupData.length !== 0">
+    <div class="popup-item" *ngFor="let item of data.popupData">
+      <img class="popup-item__image" src="{{item.image}}" alt="{{item.name}}">
+      <p class="popup-item__title">{{item.name}}</p>
+      <p class="popup-item__price">{{item.price}}₽</p>
+    </div>
+    <button class="popup-button" mat-flat-button color="primary" (click)="onChangeRoute()">to {{data.url}}</button>
+  </div>
+  <div *ngIf="data.popupData.length === 0">
+    No items in {{data.url}}
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div *ngIf="!loading">
+	<div *ngIf="favorites" class="favorites-list">
+		<app-favorites-card *ngFor="let favorite of favorites" [favorite]="favorite" class="favorites-item" (addToCart)="onAddToCart($event)" (deleteFromFavorites)="onDeleteFromFavorites($event)"></app-favorites-card>
+	</div>
+	<div *ngIf="!favorites || favorites.length === 0">No favorites found</div>
+	<div *ngIf="error">
+		An error occurred: {{error.message}}
+	</div>
+</div>

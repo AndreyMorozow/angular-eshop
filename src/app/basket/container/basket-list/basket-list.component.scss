@@ -1,0 +1,14 @@
+.basket-list {
+	display: flex;
+	flex-direction: column;
+}
+
+.basket-item {
+	width: 100%;
+
+	margin-bottom: 30px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

@@ -1,0 +1,11 @@
+<div *ngIf="!loading" class="basket-menu">
+		<div *ngIf="basket && basket.length > 0" class="basket-menu__content">
+				<p>Total item in basket: {{basket.length}}</p>
+				<p>Total price: {{basket | sum:'price'}} ₽</p>
+				<button class="basket-menu__clear-button" mat-flat-button color="warn" (click)="this.deleteAllBasket()">Clear basket</button>
+		</div>
+		<app-basket-form></app-basket-form>
+		<div *ngIf="error">
+			An error occurred: {{error.message}}
+		</div>
+</div>

@@ -1,0 +1,23 @@
+.good-card {
+	width: 400px;
+	min-height: 523px;
+
+	&__price {
+		font-size: 19px;
+		line-height: 24px;
+		font-weight: 500;
+	}
+
+	&__buttons {
+		width: 70%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.mat-card-image {
+		width: 100%;
+		min-width: 260px;
+		height: 300px;
+		object-fit: contain;
+	}
+}

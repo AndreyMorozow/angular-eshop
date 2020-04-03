@@ -1,0 +1,15 @@
+<mat-card class="basket-card">
+	<mat-card-header>
+		<mat-card-title>{{basketItem.name}}</mat-card-title>
+	</mat-card-header>
+	<mat-card-content>
+		<img mat-card-image src="{{basketItem.image}}" alt="Photo of iphone-11">
+		<p class="basket-card__description">
+			{{basketItem.description}}
+		</p>
+		<p class="basket-card__price">{{basketItem.price}}₽</p>
+	</mat-card-content>
+	<mat-card-actions class="basket-card__buttons">
+		<button mat-flat-button color="warn" (click)="this.deleteFromBasket.emit({id: basketItem.id})">Delete from basket</button>
+	</mat-card-actions>
+</mat-card>

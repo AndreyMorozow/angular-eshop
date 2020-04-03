@@ -1,0 +1,16 @@
+<mat-card class="favorite-card">
+	<mat-card-header>
+		<mat-card-title>{{favorite.name}}</mat-card-title>
+	</mat-card-header>
+	<mat-card-content>
+		<img mat-card-image src="{{favorite.image}}" alt="Photo of iphone-11">
+		<p class="favorite-card__description">
+			{{favorite.description}}
+		</p>
+		<p class="favorite-card__price">{{favorite.price}}₽</p>
+	</mat-card-content>
+	<mat-card-actions class="favorite-card__buttons">
+		<button mat-flat-button color="primary" (click)="this.addToCart.emit({id: favorite.id, name: favorite.name, description: favorite.description, price: favorite.price, image: favorite.image})">Add to cart</button>
+		<button mat-flat-button color="warn" (click)="this.deleteFromFavorites.emit({id: favorite.id})">Delete from favourites</button>
+	</mat-card-actions>
+</mat-card>

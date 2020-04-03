@@ -1,0 +1,7 @@
+<app-navbar></app-navbar>
+<div class="container">
+	<div class="goods-container">
+		<app-goods-list class="goods-item" [goods]="goods$ | async" [loading]="isLoading$ | async" [error]="(error$ | async)"></app-goods-list>
+	</div>
+</div>
+

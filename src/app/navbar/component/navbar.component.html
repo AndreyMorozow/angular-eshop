@@ -1,0 +1,19 @@
+<nav class="navbar">
+	<div class="navbar__content">
+		<a mat-button [routerLink]="['/goods']" routerLinkActive="active-link">Main page</a>
+		<span>/</span>
+		<a mat-button [routerLink]="['/basket']" routerLinkActive="active-link">Basket</a>
+		<span>/</span>
+		<a mat-button [routerLink]="['/favorites']" routerLinkActive="active-link">Favorite</a>
+	</div>
+	<div class="navbar__icons">
+		<button (click)="this.openFavoritePopup.emit()" mat-raised-button color="primary"
+			matBadge="{{favorites.length}}" matBadgePosition="before" matBadgeColor="accent">
+			<mat-icon>favorite</mat-icon>
+		</button>
+		<button (click)="this.openBasketPopup.emit()" mat-raised-button color="primary"
+			matBadge="{{basket.length}}" matBadgePosition="before" matBadgeColor="accent">
+			<mat-icon>shopping_cart</mat-icon>
+		</button>
+	</div>
+</nav>

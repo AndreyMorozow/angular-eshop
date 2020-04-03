@@ -1,0 +1,17 @@
+<mat-card class="good-card">
+	<mat-card-header>
+		<mat-card-title>{{good.name}}</mat-card-title>
+		<mat-card-subtitle>Product card</mat-card-subtitle>
+	</mat-card-header>
+	<img mat-card-image src="{{good.image}}" alt="Photo of iphone-11">
+	<mat-card-content>
+		<p>
+			{{good.description}}
+		</p>
+		<p class="good-card__price">{{good.price}}₽</p>
+	</mat-card-content>
+	<mat-card-actions class="good-card__buttons">
+		<button mat-flat-button color="warn" (click)="this.addToCart.emit({name: good.name, description: good.description, price: good.price, image: good.image})">Add to cart</button>
+		<button mat-flat-button color="primary" (click)="this.addToFavorites.emit({name: good.name, description: good.description, price: good.price, image: good.image})">Add to favourites</button>
+	</mat-card-actions>
+</mat-card>

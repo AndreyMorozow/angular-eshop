@@ -1,0 +1,38 @@
+.favorite-card {
+	max-width: 100%;
+
+	&__price {
+		width: 20%;
+		font-size: 19px;
+		line-height: 24px;
+		font-weight: 500;
+	}
+
+	&__buttons {
+		width: 300px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__description {
+		width: 40%;
+		margin-right: auto;
+	}
+
+	.mat-card-content {
+		display: flex;
+	}
+
+	.mat-card-image {
+		width: 30%;
+		min-width: 260px;
+		height: 250px;
+		margin-right: 5%;
+		object-fit: contain;
+	}
+
+}
+
+.mat-card-image:first-child {
+	margin-top: 0;
+}

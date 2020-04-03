@@ -1,0 +1,9 @@
+<div *ngIf="!loading">
+	<div *ngIf="goods" class="goods-list">
+		<app-goods-card class="goods-item" *ngFor="let good of goods" [good]="good" (addToCart)="onAddToCart($event)" (addToFavorites)="onAddFavorite($event)"></app-goods-card>
+	</div>
+	<div *ngIf="!goods">No goods found</div>
+	<div *ngIf="error">
+		An error occurred: {{error.message}}
+	</div>
+</div>

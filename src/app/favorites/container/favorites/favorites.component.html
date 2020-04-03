@@ -1,0 +1,7 @@
+<app-navbar></app-navbar>
+<div class="container">
+	<div class="favorites-container">
+		<app-favorites-list class="favorites-item"  [favorites]="favorites$ | async" [loading]="isLoading$ | async" [error]="(error$ | async)"></app-favorites-list>
+	</div>
+</div>
+
