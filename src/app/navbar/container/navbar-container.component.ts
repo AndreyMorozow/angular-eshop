@@ -21,7 +21,7 @@ import {
 export class NavbarComponent implements OnInit {
 
   favorites$: Observable<Favorites[]>;
-  basket$: Observable<Basket[]>;  
+  basket$: Observable<Basket[]>;
   constructor(private store$: Store<RootStoreState.State>, public dialog: MatDialog) { }
 
   ngOnInit() {
