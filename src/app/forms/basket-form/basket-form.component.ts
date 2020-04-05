@@ -35,6 +35,18 @@ export class BasketFormComponent implements OnInit {
 		return this.formGroup.get('name') as FormControl
 	}
 
+	get email() {
+		return this.formGroup.get('email') as FormControl
+	}
+
+	get phone() {
+		return this.formGroup.get('phone') as FormControl
+	}
+
+	get description() {
+		return this.formGroup.get('description') as FormControl
+	}
+
 	getErrorEmail() {
 		return this.formGroup.get('email').hasError('required') ? 'Field is required' :
 			this.formGroup.get('email').hasError('pattern') ? 'Not a valid emailaddress' : ''
