@@ -10,7 +10,7 @@ export class PopupWithTextComponent {
 
     constructor(
         public dialogRef: MatDialogRef<PopupWithTextComponent>,
-        @Inject(MAT_DIALOG_DATA) public data: String,
+        @Inject(MAT_DIALOG_DATA) public data: any,
     ) {}
 
     onNoClick(): void {
